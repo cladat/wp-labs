@@ -7,18 +7,18 @@
 	<meta name="keywords" content="lab, onepage, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="http://localhost:8888/wp-labs/wp-content/themes/theme/img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/flaticon.css"/>
-	<link rel="stylesheet" href="css/magnific-popup.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="http://localhost:8888/wp-labs/wp-content/themes/theme/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="http://localhost:8888/wp-labs/wp-content/themes/theme/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="http://localhost:8888/wp-labs/wp-content/themes/theme/css/flaticon.css"/>
+	<link rel="stylesheet" href="http://localhost:8888/wp-labs/wp-content/themes/theme/css/magnific-popup.css"/>
+	<link rel="stylesheet" href="http://localhost:8888/wp-labs/wp-content/themes/theme/css/owl.carousel.css"/>
+	<link rel="stylesheet" href="http://localhost:8888/wp-labs/wp-content/themes/theme/css/style.css"/>
 
 
 	<!--[if lt IE 9]>
@@ -31,7 +31,7 @@
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader">
-			<img src="img/logo.png" alt="">
+			<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/logo.png" alt="">
 			<h2>Loading.....</h2>
 		</div>
 	</div>
@@ -40,7 +40,7 @@
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="logo">
-			<img src="img/logo.png" alt=""><!-- Logo -->
+			<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/logo.png" alt=""><!-- Logo -->
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fa fa-bars"></i></div>
@@ -61,14 +61,14 @@
 	<div class="hero-section">
 		<div class="hero-content">
 			<div class="hero-center">
-				<img src="img/big-logo.png" alt="">
+				<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/big-logo.png" alt="">
 				<p>Get your freebie template now!</p>
 			</div>
 		</div>
 		<!-- slider -->
 		<div id="hero-slider" class="owl-carousel">
-			<div class="item  hero-item" data-bg="img/01.jpg"></div>
-			<div class="item  hero-item" data-bg="img/02.jpg"></div>
+			<div class="item  hero-item" data-bg="http://localhost:8888/wp-labs/wp-content/themes/theme/img/01.jpg"></div>
+			<div class="item  hero-item" data-bg="http://localhost:8888/wp-labs/wp-content/themes/theme/img/02.jpg"></div>
 		</div>
 	</div>
 	<!-- Intro Section -->
@@ -138,7 +138,7 @@
 				<div class="intro-video">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<img src="img/video.jpg" alt="">
+							<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/video.jpg" alt="">
 							<a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup">
 								<i class="fa fa-play"></i>
 							</a>
@@ -167,7 +167,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="img/avatar/01.jpg" alt="">
+									<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/avatar/01.jpg" alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -181,7 +181,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
+									<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/avatar/02.jpg" alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -195,7 +195,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="img/avatar/01.jpg" alt="">
+									<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/avatar/01.jpg" alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -209,7 +209,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
+									<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/avatar/02.jpg" alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -223,7 +223,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="img/avatar/01.jpg" alt="">
+									<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/avatar/01.jpg" alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -237,7 +237,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
+									<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/avatar/02.jpg" alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -388,7 +388,7 @@
 				<!-- single member -->
 				<div class="col-sm-4">
 					<div class="member">
-						<img src="img/team/1.jpg" alt="">
+						<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/team/1.jpg" alt="">
 						<h2>Christinne Williams</h2>
 						<h3>Project Manager</h3>
 					</div>
@@ -396,7 +396,7 @@
 				<!-- single member -->
 				<div class="col-sm-4">
 					<div class="member">
-						<img src="img/team/2.jpg" alt="">
+						<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/team/2.jpg" alt="">
 						<h2>Christinne Williams</h2>
 						<h3>Junior developer</h3>
 					</div>
@@ -404,7 +404,7 @@
 				<!-- single member -->
 				<div class="col-sm-4">
 					<div class="member">
-						<img src="img/team/3.jpg" alt="">
+						<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/team/3.jpg" alt="">
 						<h2>Christinne Williams</h2>
 						<h3>Digital designer</h3>
 					</div>
@@ -483,11 +483,11 @@
 
 
 	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/magnific-popup.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="http://localhost:8888/wp-labs/wp-content/themes/theme/js/jquery-2.1.4.min.js"></script>
+	<script src="http://localhost:8888/wp-labs/wp-content/themes/theme/js/bootstrap.min.js"></script>
+	<script src="http://localhost:8888/wp-labs/wp-content/themes/theme/js/magnific-popup.min.js"></script>
+	<script src="http://localhost:8888/wp-labs/wp-content/themes/theme/js/owl.carousel.min.js"></script>
+	<script src="http://localhost:8888/wp-labs/wp-content/themes/theme/js/circle-progress.min.js"></script>
+	<script src="http://localhost:8888/wp-labs/wp-content/themes/theme/js/main.js"></script>
 </body>
 </html>
