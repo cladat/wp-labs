@@ -41,4 +41,23 @@ function register_main_menu()
 add_action('after_setup_theme', 'register_main_menu'); 
 
 
+/**
+ * Fonction qui ajoute des attributs aux <a> des nav_menu
+ *
+ * @param [type] $att
+ * @param [type] $item
+ * @param [type] $args
+ * @return void
+ */
+function ajout_menu_a_class($atts, $item, $args)
+{
+  $class = ''; // or something based on $item
+  $atts['class'] = $class;
+  return $atts;
+}
+
+// Ajout d'un écouteur d'événement de type filtre qui nous permet de changer les attributs des balises <a>
+// les add_action et add_filter peuvent avoir jusqu'à 4 paramètres. Le 3ème pour l'ordre d'execution et le 4ème pour le nombre de paramètre qui sont passés à la fonction callback
+add_filter('nav_menu_link_attributes', 'ajout_menu_a_class', 10, 3);
+
 ?>
