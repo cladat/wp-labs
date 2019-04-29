@@ -20,6 +20,7 @@ class EnqueueScript
     wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css');
     wp_enqueue_style('owl.carousel', get_template_directory_uri() . '/css/owl.carousel.css');
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
+    wp_enqueue_style('coding-theme', get_template_directory_uri() . '/css/coding-theme.css');
 
     wp_enqueue_script('jquery-perso', get_template_directory_uri() . '/js/jquery-2.1.4.min.js', null, true);
     wp_enqueue_script('bootstrap-perso', get_template_directory_uri() . '/js/bootstrap.min.js', ['jquery-perso'], null, true);
