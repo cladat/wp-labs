@@ -10,7 +10,10 @@ get_header();
 					<!-- Single Post -->
 					<div class="single-post">
 						<div class="post-thumbnail">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/blog/blog-1.jpg" alt="">
+            <?php
+              // thumbnail | medium | medium_large | large
+              the_post_thumbnail('medium_large')
+            ?>
 							<div class="post-date">
 								<h2>03</h2>
 								<h3>Nov 2017</h3>

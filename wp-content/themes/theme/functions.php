@@ -60,4 +60,17 @@ function ajout_menu_a_class($atts, $item, $args)
 // les add_action et add_filter peuvent avoir jusqu'à 4 paramètres. Le 3ème pour l'ordre d'execution et le 4ème pour le nombre de paramètre qui sont passés à la fonction callback
 add_filter('nav_menu_link_attributes', 'ajout_menu_a_class', 10, 3);
 
+/**
+ * Ajout de la fonctionnalité d'un ajout d'image pour les posts
+ *
+ * @return void
+ */
+function ajout_image_article()
+{
+  add_theme_support('post-thumbnails');
+  $test = 0;
+}
+// Ajout d'un écouteur d'événement pour activer les images mise en avant pour les post (article)
+add_action('init', 'ajout_image_article'); 
+
 ?>
