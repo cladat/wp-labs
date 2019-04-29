@@ -1,8 +1,11 @@
 <?php
 
 // Fonction get_template_directory() renvoit le chemin du dossier du thème actif sur (à ne pas confondre avec get_template_directory_uri() qui renvoi une url) 
-require_once(get_template_directory() . '/includes/enqueue-script.php');
-require_once(get_template_directory() . '/includes/menu.php');
+
+// nous utilisons le fonction define() de php pour pouvoir utiliser une constante global
+define('INCLUDE_DIR', get_template_directory() . "includes");
+require_once(INCLUDE_DIR . '/enqueue-script.php');
+require_once(INCLUDE_DIR . '/menu.php');
 
 
 /**
