@@ -5,11 +5,12 @@ class EnqueueScript
 /**
  * Fonction qui va ajouter des scripts dynamiquement afin que l'on puisse les inclures dans le thème avec wp_head() et wp_footer()
  * Nous ajoutons le mot public afin que cette méthode puisse être utilisée depuis l'exterieur. Cela veut dire que l'on peut créer une instance de cette class et puis faire appel à la méthode ( ex: $instance->methode() )
+ * static permet de pouvoir utiliser la méthode directement depuis la class sans devoir l'instancier
  *
  * @return void
  */
 
-  public function ajout_css_js()
+  public static function ajout_css_js()
   {
     wp_enqueue_style('favicon', get_template_directory_uri() . '/img/favicon.ico');
     wp_enqueue_style('font-oswald', "https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700");
@@ -29,8 +30,8 @@ class EnqueueScript
   }
 }
 
-$enqueue_script = new EnqueueScript();
+// $enqueue_script = new EnqueueScript();
 
-add_action('wp_enqueue_scripts', [$enqueue_script, 'ajout_css_js']);
+add_action('wp_enqueue_scripts', [EnqueueScript::class, 'ajout_css_js']);
 
 ?>
