@@ -1,3 +1,10 @@
+<?php
+// https://developer.wordpress.org/reference/functions/get_theme_mod/
+// Attention dans ce template on utilise un raccourci pour <?php echo par <?= ceci n'est possible que si la config php.ini le permet short_open_tag. À ne faire que si vous avez le control de la config php.ini
+$text_column_left = get_theme_mod('coding-about-text-left', __('Text about left'));
+$text_column_right = get_theme_mod('coding-about-text-right', __('Text about right'));
+?>
+
 <!-- About section -->
 	<div class="about-section">
 		<div class="overlay"></div>
@@ -41,7 +48,7 @@
 		<!-- card section end-->
 
 
-		<!-- About contant -->
+		<!-- About content -->
 		<div class="about-contant">
 			<div class="container">
 				<div class="section-title">
@@ -49,10 +56,10 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequat ante ac congue. Quisque porttitor porttitor tempus. Donec maximus ipsum non ornare vporttitor porttitorestibulum. Sed libero nibh, feugiat at enim id, bibendum sollicitudin arcu.</p>
+						<p><?= $text_column_left; ?></p>
 					</div>
 					<div class="col-md-6">
-						<p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. Quisque porttitor porttitorlaoreet vel risus et luctus.</p>
+						<p><?= $text_column_right; ?></p>
 					</div>
 				</div>
 				<div class="text-center mt60">
