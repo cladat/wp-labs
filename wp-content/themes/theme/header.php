@@ -43,6 +43,14 @@
 				<li><a href="contact.html">Contact</a></li>
 				<li><a href="elements.html">Elements</a></li>
 			</ul>
+			<?php
+        wp_nav_menu([
+            // 'menu' => 'main-menu',
+          'menu_class' => 'navbar-nav ml-auto',
+          'theme_location' => 'main-menu',
+          'container' => ''
+        ]);
+        ?>
 		</nav>
 	</header>
 	<!-- Header section end -->
