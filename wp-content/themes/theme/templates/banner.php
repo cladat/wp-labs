@@ -3,7 +3,7 @@
 		<div class="hero-content">
 			<div class="hero-center">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/big-logo.png" alt="">
-				<p>Get your freebie template now!</p>
+				<p><?php echo get_bloginfo('description'); ?></p>
 			</div>
 		</div>
 		<!-- slider -->
