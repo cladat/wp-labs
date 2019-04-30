@@ -220,9 +220,11 @@ ul {
 	0% {
 		opacity: 1;
 	}
+
 	50% {
 		opacity: 0.3;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -232,9 +234,11 @@ ul {
 	0% {
 		opacity: 1;
 	}
+
 	50% {
 		opacity: 0.3;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -425,7 +429,7 @@ ul {
 	text-align: center;
 	background: #f5faf8;
 	-webkit-box-shadow: 0 0 8px rgba(74, 74, 74, 0.1);
-	        box-shadow: 0 0 8px rgba(74, 74, 74, 0.1);
+	box-shadow: 0 0 8px rgba(74, 74, 74, 0.1);
 	-webkit-transition: all 0.4s ease 0s;
 	-o-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
@@ -479,14 +483,14 @@ ul {
 
 .intro-video {
 	-webkit-transform: translateY(50%);
-	    -ms-transform: translateY(50%);
-	        transform: translateY(50%);
+	-ms-transform: translateY(50%);
+	transform: translateY(50%);
 	margin-top: -90px;
 }
 
 .intro-video img {
 	-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
-	        box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
 }
 
 .intro-video a {
@@ -607,8 +611,8 @@ ul {
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
 	-webkit-transform: scale(0);
-	    -ms-transform: scale(0);
-	        transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
 }
 
 #testimonial-slide .owl-dots .owl-dot.active {
@@ -619,8 +623,8 @@ ul {
 
 #testimonial-slide .owl-dots .owl-dot.active:after {
 	-webkit-transform: scale(1);
-	    -ms-transform: scale(1);
-	        transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
 }
 
 #testimonial-slide .owl-dots .owl-dot:first-child.active {
@@ -1081,6 +1085,7 @@ ul {
 
 .post-meta {
 	margin-bottom: 40px;
+	margin-top: 10px;
 }
 
 .post-meta a {
@@ -1438,8 +1443,8 @@ ul {
 
 .circle-progress canvas {
 	-webkit-transform: rotate(90deg);
-	    -ms-transform: rotate(90deg);
-	        transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .circle-progress .progress-info {
@@ -1493,6 +1498,7 @@ ul {
 	#testimonial-slide .owl-dots {
 		right: -100px;
 	}
+
 	.test-overlay {
 		width: 500px;
 	}
@@ -1502,6 +1508,7 @@ ul {
 	#testimonial-slide .owl-dots {
 		right: -40px;
 	}
+
 	.test-overlay {
 		width: 400px;
 	}
@@ -1517,11 +1524,11 @@ ul {
 	#testimonial-slide .owl-dots {
 		top: 95%;
 		-webkit-transform: rotate(-90deg);
-		    -ms-transform: rotate(-90deg);
-		        transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 		-webkit-transform-origin: left center;
-		    -ms-transform-origin: left center;
-		        transform-origin: left center;
+		-ms-transform-origin: left center;
+		transform-origin: left center;
 		left: 50%;
 		margin-left: -4px;
 	}
@@ -1533,51 +1540,64 @@ ul {
 	.test-overlay {
 		display: none;
 	}
+
 	#testimonial-slide .owl-dots {
 		top: 95%;
 		-webkit-transform: rotate(-90deg);
-		    -ms-transform: rotate(-90deg);
-		        transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 		-webkit-transform-origin: left center;
-		    -ms-transform-origin: left center;
-		        transform-origin: left center;
+		-ms-transform-origin: left center;
+		transform-origin: left center;
 		left: 50%;
 		margin-left: -4px;
 	}
+
 	.card-section {
 		padding-bottom: 0;
 	}
+
 	.lab-card {
 		margin-bottom: 80px;
 	}
+
 	.promotion-section .promo-btn-area {
 		text-align: left;
 	}
+
 	.contact-section::after {
 		width: 100%;
 		right: 0;
 	}
+
 	.contact-info {
 		margin-bottom: 95px;
 	}
+
 	.col-push {
 		left: 0;
 	}
+
 	.col-pull {
 		right: 0;
 	}
+
 	.sv-card {
 		margin-bottom: 30px;
 	}
+
 	.newsletter-section h2 {
 		margin-bottom: 30px;
 	}
+
 	.circle-progress {
 		margin-bottom: 40px;
 	}
+
 	.icon-box {
 		margin-bottom: 30px;
 	}
+
 	.facts .fact {
 		margin-bottom: 40px;
 	}
@@ -1589,30 +1609,37 @@ ul {
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
+
 	.header-section .menu-list {
 		display: none;
 		float: none;
 		clear: both;
 		border-top: 1px solid #ddd;
 	}
+
 	.header-section .menu-list li {
 		display: inline;
 	}
+
 	.header-section .menu-list li a {
 		display: block;
 		padding: 10px;
 		margin-right: 0;
 	}
+
 	.header-section .menu-list li a:after {
 		left: 0%;
 	}
+
 	.header-section .menu-list li a:hover:after {
 		width: 10px;
 		margin-left: 10px;
 	}
+
 	.header-section .menu-list .current a:after {
 		margin-left: 10px;
 	}
+
 	.responsive {
 		display: block;
 		color: #333;
@@ -1621,85 +1648,108 @@ ul {
 		right: 30px;
 		padding-top: 10px;
 	}
+
 	.owl-carousel .owl-nav .owl-prev,
 	.owl-carousel .owl-nav .owl-next {
 		width: 50px;
 	}
+
 	.hero-content img {
 		max-width: 280px;
 	}
+
 	.test-overlay {
 		display: none;
 	}
+
 	#testimonial-slide .owl-dots {
 		top: 86%;
 		-webkit-transform: rotate(-90deg);
-		    -ms-transform: rotate(-90deg);
-		        transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 		-webkit-transform-origin: left center;
-		    -ms-transform-origin: left center;
-		        transform-origin: left center;
+		-ms-transform-origin: left center;
+		transform-origin: left center;
 		left: 50%;
 		margin-left: -4px;
 	}
+
 	.card-section {
 		padding-bottom: 0;
 	}
+
 	.lab-card {
 		margin-bottom: 80px;
 	}
+
 	.testimonial-section {
 		padding-top: 160px;
 	}
+
 	.member {
 		margin-bottom: 60px;
 	}
+
 	.promotion-section .promo-btn-area {
 		text-align: left;
 	}
+
 	.contact-section::after {
 		width: 100%;
 		right: 0;
 	}
+
 	.contact-info {
 		margin-bottom: 95px;
 	}
+
 	.col-push {
 		left: 0;
 	}
+
 	.col-pull {
 		right: 0;
 	}
+
 	.devices {
 		margin-top: 70px;
 		margin-bottom: 70px;
 	}
+
 	.sv-card {
 		margin-bottom: 30px;
 	}
+
 	.newsletter-section h2 {
 		margin-bottom: 30px;
 	}
+
 	.nl-form {
 		text-align: center;
 	}
+
 	.nl-form input[type="text"] {
 		margin-bottom: 30px;
 		width: 100%;
 	}
+
 	.circle-progress {
 		margin-bottom: 40px;
 	}
+
 	.page-pagination,
 	.blog-posts {
 		margin-bottom: 90px;
 	}
+
 	.buttons button {
 		margin-bottom: 20px;
 	}
+
 	.icon-box {
 		margin-bottom: 30px;
 	}
+
 	.facts .fact {
 		margin-bottom: 40px;
 	}
@@ -1710,26 +1760,32 @@ ul {
 	.header-section {
 		padding: 0 20px;
 	}
+
 	.hero-content {
 		display: none;
 	}
+
 	.intro-video {
 		margin-top: -30px;
 	}
+
 	.post-thumbnail .post-date {
 		-webkit-transform: scale(0.7);
-		    -ms-transform: scale(0.7);
-		        transform: scale(0.7);
+		-ms-transform: scale(0.7);
+		transform: scale(0.7);
 		-webkit-transform-origin: left top;
-		    -ms-transform-origin: left top;
-		        transform-origin: left top;
+		-ms-transform-origin: left top;
+		transform-origin: left top;
 	}
+
 	.single-post .author .avatar {
 		margin-right: 20px;
 	}
+
 	.single-post .author .avatar img {
 		min-width: 60px;
 	}
+
 	.buttons button {
 		margin-bottom: 20px;
 	}
