@@ -15,17 +15,19 @@ get_header();
               the_post_thumbnail('medium_large')
             ?>
 							<div class="post-date">
-								<h2>03</h2>
-								<h3>Nov 2017</h3>
+								<h2><?php the_time('j'); ?></h2>
+								<h3><?php the_time('M Y'); ?></h3>
 							</div>
             </div>
             <?php while (have_posts()) : the_post(); ?>
               <div class="post-content">
                 <h2 class="post-title"> <?php the_title(); ?> </h2>
                 <div class="post-meta">
-                  <a href="">Loredana Papp</a>
-                  <a href="">Design, Inspiration</a>
-                  <a href="">2 Comments</a>
+								<a href=""><?php the_author(); ?></a>
+                
+								<a href=""><?php the_tags(); ?></a>
+                
+								<a href=""><?php echo get_comments_number(); ?> comment</a>
                 </div>
                 <?php the_content(); ?>
               </div>
@@ -33,16 +35,17 @@ get_header();
 						<!-- Post Author -->
 						<div class="author">
 							<div class="avatar">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/avatar/03.jpg" alt="">
+								<?php echo get_avatar( get_the_author_meta('user_email')); ?>
+							
 							</div>
 							<div class="author-info">
-								<h2>Lore Williams, <span>Author</span></h2>
-								<p>Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volutpat. Donec fermen tum convallis ante eget tristique. </p>
+								<h2><?php the_author(); ?>, <span>Author</span></h2>
+								<p> <?php echo get_the_author_meta('description'); ?> </p>
 							</div>
 						</div>
 						<!-- Post Comments -->
 						<div class="comments">
-							<h2>Comments (2)</h2>
+							<h2>Comments (<?php echo get_comments_number(); ?>)</h2>
 							<ul class="comment-list">
 								<li>
 									<div class="avatar">
@@ -50,21 +53,12 @@ get_header();
 									</div>
 									<div class="commetn-text">
 										<h3>Michael Smith | 03 nov, 2017 | Reply</h3>
-										<p>Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volutpat. Donec fermen tum convallis ante eget tristique. </p>
-									</div>
-								</li>
-								<li>
-									<div class="avatar">
-										<img src="<?php echo get_template_directory_uri(); ?>/img/avatar/02.jpg" alt="">
-									</div>
-									<div class="commetn-text">
-										<h3>Michael Smith | 03 nov, 2017 | Reply</h3>
-										<p>Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volutpat. Donec fermen tum convallis ante eget tristique. </p>
+										<p> </p>
 									</div>
 								</li>
 							</ul>
 						</div>
-						<!-- Commert Form -->
+						<!-- Comment Form -->
 						<div class="row">
 							<div class="col-md-9 comment-from">
 								<h2>Leave a comment</h2>
