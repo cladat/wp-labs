@@ -1,6 +1,6 @@
 <?php
-
 get_header();
+// Ce fichier template spécial de wordpress est appelé suite à une recheche avec un formulaire de type get qui pointe sur l'url de base du site
 ?>
 
 	<!-- Page header -->
@@ -8,10 +8,9 @@ get_header();
 		<div class="overlay"></div>
 		<div class="container text-right">
 			<div class="page-info">
-				<h2>Blog</h2>
+				<h2>Résultats de la recherche pour</h2>
 				<div class="page-links">
-					<a href="#">Home</a>
-					<span>Blog</span>
+					<span>"<?php echo get_search_query(); ?>"</span>
 				</div>
 			</div>
 		</div>
@@ -22,21 +21,21 @@ get_header();
 	<!-- page section -->
 	<div class="page-section spad">
 		<div class="container">
-		
 			<div class="row">
 			<div class="col-md-8 col-sm-7 blog-posts">
-			
- 				<!-- Post item -->
-				<?php get_template_part('templates/partials/all-posts'); ?>
+      
+      <?php while (have_posts()): the_post(); ?>
+        <li class="list-group-item">
+            <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+            </a> </li>
+      <?php endwhile; ?>
 
-				<!-- Pagination -->
-				<div class="page-pagination">
-					<a class="active" href="">01.</a>
-					<a href="">02.</a>
-					<a href="">03.</a>
-				</div>
+ 				<!-- Post item -->
+				<!-- <?php get_template_part('templates/partials/all-posts'); ?> -->
 				
-			</div>
+      </div>
+      
 				<!-- Sidebar area -->
 				<div class="col-md-4 col-sm-5 sidebar">
 
@@ -53,27 +52,6 @@ get_header();
 	</div>
 	<!-- page section end-->
 
-
-	<!-- newsletter section -->
-	<div class="newsletter-section spad">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<h2>Newsletter</h2>
-				</div>
-				<div class="col-md-9">
-					<!-- newsletter form -->
-					<form class="nl-form">
-						<input type="text" placeholder="Your e-mail here">
-						<button class="site-btn btn-2">Newsletter</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- newsletter section end-->
-
 <?php
 get_footer();
-
 ?>
