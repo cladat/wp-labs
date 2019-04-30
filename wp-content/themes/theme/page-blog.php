@@ -39,11 +39,7 @@ get_header();
 			</div>
 				<!-- Sidebar area -->
 				<div class="col-md-4 col-sm-5 sidebar">
-
-				<form class="search-form" action="<?php echo get_site_url(); ?>" method="get">
-          <input type="text" name="s" id="">
-          <button class="search-btn" type="submit"><i class="flaticon-026-search"></i></button>
-				</form>
+					<?php get_search_form(); ?>
 								
 					<?php dynamic_sidebar('sidebar-1'); ?>
 				</div>
