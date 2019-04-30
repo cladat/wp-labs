@@ -1,6 +1,8 @@
 <?php
+
 get_header();
 ?>
+
 	<!-- Page header -->
 	<div class="page-top-section">
 		<div class="overlay"></div>
@@ -15,86 +17,26 @@ get_header();
 		</div>
 	</div>
 	<!-- Page header end-->
-	
+
+
 	<!-- page section -->
 	<div class="page-section spad">
 		<div class="container">
+		
 			<div class="row">
-				<div class="col-md-8 col-sm-7 blog-posts">
-					<!-- Single Post -->
-					<div class="single-post">
-						<div class="post-thumbnail">
-            <?php
-              // thumbnail | medium | medium_large | large
-              the_post_thumbnail('medium_large')
-            ?>
-							<div class="post-date">
-								<h2><?php the_time('j'); ?></h2>
-								<h3><?php the_time('M Y'); ?></h3>
-							</div>
-            </div>
-            <?php while (have_posts()) : the_post(); ?>
-              <div class="post-content">
-                <h2 class="post-title"> <?php the_title(); ?> </h2>
-                <div class="post-meta">
-								<a href=""><?php the_author(); ?></a>
-                
-								<a href=""><?php the_tags(); ?></a>
-                
-								<a href=""><?php echo get_comments_number(); ?> comment</a>
-                </div>
-                <?php the_content(); ?>
-              </div>
-            <?php endwhile; ?>
-						<!-- Post Author -->
-						<div class="author">
-							<div class="avatar">
-								<?php echo get_avatar( get_the_author_meta('user_email')); ?>
-							
-							</div>
-							<div class="author-info">
-								<h2><?php the_author(); ?>, <span>Author</span></h2>
-								<p> <?php echo get_the_author_meta('description'); ?> </p>
-							</div>
-						</div>
-						<!-- Post Comments -->
-						<div class="comments">
-							<h2>Comments (<?php echo get_comments_number(); ?>)</h2>
-							<ul class="comment-list">
-								<li>
-									<div class="avatar">
-										<img src="<?php echo get_template_directory_uri(); ?>/img/avatar/01.jpg" alt="">
-									</div>
-									<div class="commetn-text">
-										<h3>Michael Smith | 03 nov, 2017 | Reply</h3>
-										<p> </p>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<!-- Comment Form -->
-						<div class="row">
-							<div class="col-md-9 comment-from">
-								<h2>Leave a comment</h2>
-								<form class="form-class">
-									<div class="row">
-										<div class="col-sm-6">
-											<input type="text" name="name" placeholder="Your name">
-										</div>
-										<div class="col-sm-6">
-											<input type="text" name="email" placeholder="Your email">
-										</div>
-										<div class="col-sm-12">
-											<input type="text" name="subject" placeholder="Subject">
-											<textarea name="message" placeholder="Message"></textarea>
-											<button class="site-btn">send</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
+			<div class="col-md-8 col-sm-7 blog-posts">
+			
+ 				<!-- Post item -->
+				<?php get_template_part('templates/partials/all-posts'); ?>
+
+				<!-- Pagination -->
+				<div class="page-pagination">
+					<a class="active" href="">01.</a>
+					<a href="">02.</a>
+					<a href="">03.</a>
 				</div>
+				
+			</div>
 				<!-- Sidebar area -->
 				<div class="col-md-4 col-sm-5 sidebar">
 					<!-- Single widget -->
@@ -153,16 +95,17 @@ get_header();
 					<div class="widget-item">
 						<h2 class="widget-title">Add</h2>
 						<div class="add">
-							<a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/add.jpg" alt=""></a>
+							<a href=""><img src="img/add.jpg" alt=""></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-  <!-- page section end-->
-  
-  <!-- newsletter section -->
+	<!-- page section end-->
+
+
+	<!-- newsletter section -->
 	<div class="newsletter-section spad">
 		<div class="container">
 			<div class="row">
@@ -183,4 +126,5 @@ get_header();
 
 <?php
 get_footer();
+
 ?>
