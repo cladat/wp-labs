@@ -31,7 +31,10 @@
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="logo">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""><!-- Logo -->
+			<!-- Logo -->
+			<a href="<?php echo get_site_url(); ?>">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
+			</a>
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fa fa-bars"></i></div>
