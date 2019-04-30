@@ -10,8 +10,8 @@
 						<div class="post-thumbnail">
 							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
 							<div class="post-date">
-								<h2>03</h2>
-								<h3>Nov 2017</h3>
+								<h2><?php the_time('j'); ?></h2>
+								<h3><?php the_date('M Y'); ?></h3>
 							</div>
 						</div>
 						<div class="post-content">
@@ -19,9 +19,11 @@
               <?php the_title(); ?>
               </h2>
 							<div class="post-meta">
-								<a href="">Loredana Papp</a>
-								<a href="">Design, Inspiration</a>
-								<a href="">2 Comments</a>
+								<a href=""><?php the_author(); ?></a>
+                
+								<a href=""><?php the_tags(); ?></a>
+                
+								<a href=""><?php echo get_comments_number(); ?> comment</a>
 							</div>
 							<?php the_content(); ?>
 							<a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
