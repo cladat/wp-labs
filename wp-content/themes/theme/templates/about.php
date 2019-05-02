@@ -3,6 +3,7 @@
 // Attention dans ce template on utilise un raccourci pour <?php echo par <?= ceci n'est possible que si la config php.ini le permet short_open_tag. À ne faire que si vous avez le control de la config php.ini
 $text_column_left = get_theme_mod('coding-about-text-left', __('Text about left'));
 $text_column_right = get_theme_mod('coding-about-text-right', __('Text about right'));
+$title_about = get_theme_mod('coding-about-title', __('Title about'));
 ?>
 
 <!-- About section -->
@@ -52,7 +53,7 @@ $text_column_right = get_theme_mod('coding-about-text-right', __('Text about rig
 		<div class="about-contant">
 			<div class="container">
 				<div class="section-title">
-					<h2>Get in <span>the Lab</span> and discover the world</h2>
+					<h2> <?=$title_about; ?></h2>
 				</div>
 				<div class="row">
 					<div class="col-md-6">
