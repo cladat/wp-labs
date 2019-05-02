@@ -29,6 +29,12 @@ class MgCustomize {
       'title' => __('Customise the title'),
       
     ]);
+    // Ajout d'une section VIDEO dans ABOUT
+    $wp_customize->add_section('coding-about-section-video', [
+      'panel' => 'coding-panel-about',
+      'title' => __('Change the video'),
+      
+    ]);
     
     // Ajout d'un setting qui contiendra des informations dans la base de donnée sous la clé correspondant à son id (premier paramètre)
      // La clé est utilisé pour récuperer les valeurs dans le thème grâce à la fonction get_theme_mod()
@@ -45,6 +51,16 @@ class MgCustomize {
     ]);
     // Setting dans la section TITLE de ABOUT pour le titre 
     $wp_customize->add_setting('coding-about-title', [
+      'type' => 'theme_mod',
+      'sanitize_callback' => 'sanitize_textarea_field'
+    ]);
+    // Setting dans la section VIDEO de ABOUT 
+    $wp_customize->add_setting('coding-about-video', [
+      'type' => 'theme_mod',
+      'sanitize_callback' => 'sanitize_textarea_field'
+    ]);
+    // Setting dans la section PHOTO de ABOUT 
+    $wp_customize->add_setting('coding-about-photo', [
       'type' => 'theme_mod',
       'sanitize_callback' => 'sanitize_textarea_field'
     ]);
@@ -70,6 +86,26 @@ class MgCustomize {
       'description' => __('Customise the title'),
       'type' => 'textarea'
     ]);
+    $wp_customize->add_control('coding-about-video-control', [
+      'section' => 'coding-about-section-video',
+      'settings' => 'coding-about-video',
+      'label' => __('Video'),
+      'description' => __('Enter here the URL for your video'),
+      'type' => 'url'
+    ]);
+    $wp_customize->add_control(
+      new WP_Customize_Image_Control(
+          $wp_customize,
+          'logo',
+          array(
+              'label'      => __( 'Photo', 'theme_name' ),
+              'description' => __('Upload a photo'),
+              'section'    => 'coding-about-section-video',
+              'settings'   => 'coding-about-photo',
+              'context'    => 'your_setting_context' 
+          )
+      )
+  );
   }
 }
 

@@ -4,6 +4,9 @@
 $text_column_left = get_theme_mod('coding-about-text-left', __('Text about left'));
 $text_column_right = get_theme_mod('coding-about-text-right', __('Text about right'));
 $title_about = get_theme_mod('coding-about-title', __('Title about'));
+$video = get_theme_mod('coding-about-video', __('https://www.youtube.com/watch?v=JgHfx2v9zOU'));
+$photo = get_theme_mod('coding-about-photo', __('http://localhost:8888/wp-labs/wp-content/themes/theme/img/video.jpg'));
+
 ?>
 
 <!-- About section -->
@@ -70,8 +73,8 @@ $title_about = get_theme_mod('coding-about-title', __('Title about'));
 				<div class="intro-video">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/video.jpg" alt="">
-							<a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup">
+							<img src="<?= $photo; ?>" alt="">
+							<a href="<?= $video; ?>" class="video-popup">
 								<i class="fa fa-play"></i>
 							</a>
 						</div>
