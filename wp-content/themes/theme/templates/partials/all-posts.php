@@ -11,7 +11,7 @@
 							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
 							<div class="post-date">
 								<h2><?php the_time('j'); ?></h2>
-								<h3><?php the_date('M Y'); ?></h3>
+								<h3><?php the_time('M Y'); ?></h3>
 							</div>
 						</div>
 						<div class="post-content">
@@ -20,9 +20,16 @@
               </h2>
 							<div class="post-meta">
 								<a href=""><?php the_author(); ?></a>
-                
 								<a href=""><?php the_tags(); ?></a>
-                
+
+								<!-- <?php 
+								// if (has_tags()) {
+								// 	echo '<a href="">' . the_tags() . '</a>';
+								//  } else {
+								// 	 echo 'no tags';
+								//  }
+								 ?>  -->
+
 								<a href=""><?php echo get_comments_number(); ?> comment</a>
 							</div>
 							<?php the_content(); ?>
