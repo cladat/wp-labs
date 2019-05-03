@@ -23,7 +23,7 @@ add_action('init', [MgThemeSetup::class, 'ajout_image_article']);
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-  return 20;
+  return 10;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

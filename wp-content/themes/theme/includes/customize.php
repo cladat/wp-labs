@@ -16,24 +16,22 @@ class MgCustomize {
       'title' => __('About Section'),
       'Description' => __('Customise the section about')
     ]);
+    
     // Ajout d'une section TEXT dans ABOUT (si pas de panel défini, alors la section sera visible directement)
     // Attention une section ne s'affichera que si elle contient des controls.
     $wp_customize->add_section('coding-about-section-text', [
       'panel' => 'coding-panel-about',
       'title' => __('Customise the description'),
-      
     ]);
     // Ajout d'une section TITRE dans ABOUT
     $wp_customize->add_section('coding-about-section-title', [
       'panel' => 'coding-panel-about',
       'title' => __('Customise the title'),
-      
     ]);
     // Ajout d'une section VIDEO dans ABOUT
     $wp_customize->add_section('coding-about-section-video', [
       'panel' => 'coding-panel-about',
       'title' => __('Change the video'),
-      
     ]);
     
     // Ajout d'un setting qui contiendra des informations dans la base de donnée sous la clé correspondant à son id (premier paramètre)
@@ -64,6 +62,7 @@ class MgCustomize {
       'type' => 'theme_mod',
       'sanitize_callback' => 'sanitize_textarea_field'
     ]);
+    
     // Ajout d'un control (un label avec input et autre information). Le control doit être attaché à une section ainsi qu'à un setting.
     $wp_customize->add_control('coding-about-text-left-control', [
       'section' => 'coding-about-section-text',
@@ -106,6 +105,7 @@ class MgCustomize {
           )
       )
   );
+  
   }
 }
 

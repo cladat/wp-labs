@@ -1,4 +1,9 @@
-	<!-- Team Section -->
+<?php
+$team_first = get_theme_mod('coding-team-first', __('first member'));
+
+?>
+
+<!-- Team Section -->
 	<div class="team-section spad">
 		<div class="overlay"></div>
 		<div class="container">
@@ -10,7 +15,7 @@
 				<div class="col-sm-4">
 					<div class="member">
 						<img src="http://localhost:8888/wp-labs/wp-content/themes/theme/img/team/1.jpg" alt="">
-						<h2>Christinne Williams</h2>
+						<h2> <?= $team_first; ?> </h2>
 						<h3>Project Manager</h3>
 					</div>
 				</div>
