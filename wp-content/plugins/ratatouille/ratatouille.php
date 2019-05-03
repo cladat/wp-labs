@@ -28,9 +28,14 @@ function register_recipe_post_type(){
       // Nom au singulier 
       'singular_name' => 'Recette'
     ],
-    'public' => false,
-    // has_archive vous permet de vous rendre sur http://localhost:8080/index.php/recipe/ et d'y trouver toutes vos recettes si cela ne fonctionne pas c'est possible qu'il vous faille réecrire vos permaliens pour ce faire allez dans votre backoffice -> Settings -> Permaliens et cliquez sur Enregistrer les modifications,après avoir fait ça testez en passant de true a false actualisant votre page http://localhost:8080/index.php/recipe/ observez, repassez de false à true et actualisez puis observez.
-    'has_archive' => true,
+    'public' => true,
+    // has_archive permet de se rendre sur http://localhost:8888/recipe/ et d'y trouver toutes les recettes. si cela ne fonctionne pas: backoffice -> Settings -> Permalinks => save changes. vérifier aussi qu'on ai bien activé le nouveau plugin.
+    'has_archive' => true,    
+    // Dans le commit précédent on pouvait retrouver nos recettes avec l'urls finissant par /recipe/ a présent grâce au rewrite et a son paramètre slug on peut changer le slug de notre url pour que ce soit /recette/
+    // A savoir: Dés que vous touchez a l'url même dans le code il faut allez dans me backoffice puis settings->permalinks et enregistrer les modifications sinon cela ne marchera pas.
+    'rewrite' => [
+      'slug' => 'recette'
+    ]
     ]
   );
 }
