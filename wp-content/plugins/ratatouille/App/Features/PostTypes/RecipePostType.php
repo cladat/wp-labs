@@ -56,6 +56,8 @@ class RecipePostType
         // Rajout d'un icon à coté de notre lien 'Recette' dans notre menu, par défaut on à une epingle, je l'ai changée pour un bouquin. La liste des icones peut être retrouvé sur :
         // https://developer.wordpress.org/resource/dashicons/
         'menu_icon' => 'dashicons-book',
+        // On choisis dans supports ce qu'on veut rendre accessible dans notre post-type, un titre,un textarea,un extrait et la possibilité de rajouter une image mise en avant.
+        'supports' =>  ['title', 'editor', 'excerpt', 'thumbnail'],
       ]
     );
   }
