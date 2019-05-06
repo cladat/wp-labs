@@ -28,8 +28,14 @@ class RecipeDetailsMetabox
    */
   public static function render()
   {
-    // Je fais appel à ma function view($path) dans laquelle je rempli le paramètre avec le nom du fichier et son dossier parent, avant on avait: include(RAT_VIEW_DIR .'metaboxes/recipe-detail.html.php');
-    view('metaboxes/recipe-detail');
+    // Récupération de toutes les metadatas du post
+    // https://developer.wordpress.org/reference/functions/get_post_meta/
+    $data = get_post_meta(get_the_ID());
+    // Etant donné que $data est un tableau de données contenant toutes les metadatas possible on doit préciser qu'on veut celle dont l'index est 0. nous avons qu'une seule metadata stockée mais la récupération se fait quand même via un tableau.
+    $time = $data['rat_time_preparation'][0];
+
+     // Dans notre helpers.php à notre helper view on a rajouté une variable qui par défaut vaut un tableau vide, ca veux dire que maintenant que notre helper à un second paramètre on sen sert pour passer notre tableau ['time_choisi' => $time], le premier 'time_choisi' est la clé qu'on à décidé d'appeler comme ça, le second $time est la valeur qu'on a stocké plus haut, on a donc associé une valeur a une clé et on a envoyé ce tableau dans notre view recipe-detail.
+     view('metaboxes/recipe-detail',['time_choisi' => $time]);
   }
 
   /**
