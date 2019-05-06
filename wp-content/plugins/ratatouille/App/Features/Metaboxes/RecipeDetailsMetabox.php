@@ -32,7 +32,7 @@ class RecipeDetailsMetabox
     // https://developer.wordpress.org/reference/functions/get_post_meta/
     $data = get_post_meta(get_the_ID());
     // Etant donné que $data est un tableau de données contenant toutes les metadatas possible on doit préciser qu'on veut celle dont l'index est 0. nous avons qu'une seule metadata stockée mais la récupération se fait quand même via un tableau.
-    $time = $data['rat_time_preparation'][0];
+    $time = extract_data_attr('rat_time_preparation',$data);
 
     // Ancienne façon : view('metaboxes/recipe-detail',['time_choisi' => $time]);
     // Nouvelle façon de passer les données, avec l'aide de la function compact()
