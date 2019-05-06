@@ -34,8 +34,10 @@ class RecipeDetailsMetabox
     // Etant donné que $data est un tableau de données contenant toutes les metadatas possible on doit préciser qu'on veut celle dont l'index est 0. nous avons qu'une seule metadata stockée mais la récupération se fait quand même via un tableau.
     $time = $data['rat_time_preparation'][0];
 
-     // Dans notre helpers.php à notre helper view on a rajouté une variable qui par défaut vaut un tableau vide, ca veux dire que maintenant que notre helper à un second paramètre on sen sert pour passer notre tableau ['time_choisi' => $time], le premier 'time_choisi' est la clé qu'on à décidé d'appeler comme ça, le second $time est la valeur qu'on a stocké plus haut, on a donc associé une valeur a une clé et on a envoyé ce tableau dans notre view recipe-detail.
-     view('metaboxes/recipe-detail',['time_choisi' => $time]);
+    // Ancienne façon : view('metaboxes/recipe-detail',['time_choisi' => $time]);
+    // Nouvelle façon de passer les données, avec l'aide de la function compact()
+    // La function compact créé un tableau ou elle met en clef le nom de la variable qu'on lui passe,on lui passe cette variable d'une manière assez particulière car on lui retire le '$' et qu'en plus on la met entre guillemet. En lui passant de cette manière elle créé donc un tableau avec comme clef et valeur le meme nom ce qui donne en soit : ['time' => $time] ca veux dire également qu'on doit aller changer dans recipe-detail.html.php le nom de la clef a la quelle on fait appel.
+    view('metaboxes/recipe-detail',compact('time'));
   }
 
   /**
