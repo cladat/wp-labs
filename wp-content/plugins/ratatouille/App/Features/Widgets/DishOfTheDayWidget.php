@@ -38,4 +38,18 @@ class DishOfTheDayWidget extends \WP_Widget
     // On compact les deux variables pour pouvoir nous en servir dans le fichier en question ligne 3 et 6, il est interessent de faire un clique droit sur le formulaire et de regarder dans l'attribut name, le name qui a été généré par la function.
     view('widgets/dish-of-day-form',compact('title_name', 'text_name'));
   }
+
+   // On utilise la methode update qui attend 2 paramètres qui vont être automatiquement rempli par la class WP_Widget, le premier paramètre va contenir les données entrées dans le formulaire, et le second paramètre les anciennes données qui avaient été enregistrées grâce à ce formulaire.
+   public function update($new_instance, $old_instance){
+    // On créer une variable de type Array
+    $instance = [];
+    // la variable new_instance a récupérée les données du formulaire,on va restructurer ça en leur attribuant des clefs personnalisé, $new_instance['title'] pour récupérer la valeur de notre formulaire dont le name est title et la meme chose dans la ligne en dessous pour le champ dont le name est text. Ce qui nous donne un tableau instance qui vaudra : 
+      // array(2)
+        // 'title' : 'valeurDuTitleDuFormulaire',
+        // 'text' : 'ValeurTextDuFormulaire',
+    $instance['title'] = $new_instance['title'];
+    $instance['text'] = $new_instance['text'];
+    // On return le tableau qui sera récupéré par notre method form ligne 36 automatique.
+    return $instance;
+  }
 } 
