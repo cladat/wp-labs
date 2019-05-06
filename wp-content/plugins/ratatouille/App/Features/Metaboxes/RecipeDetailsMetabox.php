@@ -32,9 +32,9 @@ class RecipeDetailsMetabox
     // https://developer.wordpress.org/reference/functions/get_post_meta/
     $data = get_post_meta(get_the_ID());
     // Etant donné que $data est un tableau de données contenant toutes les metadatas possible on doit préciser qu'on veut celle dont l'index est 0. nous avons qu'une seule metadata stockée mais la récupération se fait quand même via un tableau.
-    $time = extract_data_attr('rat_time_preparation',$data);
+    $time = extract_data_attr('time_preparation',$data);
     // Création d'une variable contenant la valeur qu'on a été chercher dans la base de donné grâce à get_post_meta(get_the_ID()) et qu'on assaini via le helper extract_data_attr()
-    $nbr_personne = extract_data_attr('rat_nbr_personne',$data);
+    $nbr_personne = extract_data_attr('nbr_personne',$data);
     // on rajout dans compact la seconde variable pour l'envoyer dans la view recipe-detail
     view('metaboxes/recipe-detail',compact('time','nbr_personne'));
   }
@@ -52,16 +52,14 @@ class RecipeDetailsMetabox
     // $_POST est une variable globale php qui contient les données qu'on envoit via un formulaire,notre page recette n'est en soit qu'un formulaire avec des inputs et des textarea qu'on rempli et ce qu'on dit en soit c'est :
     // Si notre $_POST est différent de vide alors on execute les lignes suivantes
     if (count($_POST) != 0) {
-      // On stock dans une variable la valeur de l'input dont le name est 'rat_time_preparation'
-      // on ajoute sanitize pour sécuriser les valeurs receuillies par l'utilisateur
-      // On rajoute la valeur stockée dans $time_preparation dans la base de donnée avec comme clef 'rat_time_preparation' => si la valeur est '15-30' on retrouvera cette valeur 15-30 avec comme étiquette 'rat_time_preparation'
-      // https://developer.wordpress.org/themes/theme-security/data-sanitization-escaping/
-      $time_preparation = sanitize_text_field($_POST['rat_time_preparation']);         
-      update_post_meta($post_id, 'rat_time_preparation', $time_preparation);
-      // https://developer.wordpress.org/reference/functions/update_post_meta/
-      // on assaini la valeur récupérée par la requête et on l'envoi dans la base de donnée.
-      $nbr_personne = sanitize_text_field($_POST['rat_nbr_personne']);
-      update_post_meta($post_id,'rat_nbr_personne', $nbr_personne);
+      // tableau dans lequel sont stockées les données récupérées par la requete, auxquelles j'assigne des clefs 
+      $data = [
+        // Clefs         =>          // name du champ pour récupérer la valeur
+        'time_preparation' => sanitize_text_field($_POST['rat_time_preparation']),
+        'nbr_personne' => sanitize_text_field($_POST['rat_nbr_personne']),
+      ];
+      // J'utilise le helper update_post_metas que j'ai créé dans le fichier helpers.php ligne 36,je passe deux variables, $post_id qui contient l'id du post, et $data qui contient un tableau de données récupéré
+      update_post_metas($post_id,$data);
     }
   }
 
