@@ -46,7 +46,10 @@ class RecipeDetailsMetabox
     // Si notre $_POST est différent de vide alors on execute les lignes suivantes
     if (count($_POST) != 0) {
       // On stock dans une variable la valeur de l'input dont le name est 'rat_time_preparation'
-      $time_preparation = $_POST['rat_time_preparation'];      
+      // on ajoute sanitize pour sécuriser les valeurs receuillies par l'utilisateur
+      // On rajoute la valeur stockée dans $time_preparation dans la base de donnée avec comme clef 'rat_time_preparation' => si la valeur est '15-30' on retrouvera cette valeur 15-30 avec comme étiquette 'rat_time_preparation'
+      // https://developer.wordpress.org/themes/theme-security/data-sanitization-escaping/
+      $time_preparation = sanitize_text_field($_POST['rat_time_preparation']);         
       // https://developer.wordpress.org/reference/functions/update_post_meta/
       update_post_meta($post_id, 'rat_time_preparation', $time_preparation);
     }
