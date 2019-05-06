@@ -11,24 +11,11 @@
  *
  * @package         Ratatouille
  */
-// On use le namespace (dans autoload.php) et créer un 'ALIAS' avec la commande 'as'. Ici précision que l'alias est RecipePostType mais nécéssaire que si on modifie le nom de la class. si on veut garder un Alias qui porte le meme nom que la class il ne faut pas le préciser
-use App\Features\PostTypes\RecipePostType as RecipePostType;
-use App\Features\Taxonomies\RecipeTaxonomy;
-use App\Features\MetaBoxes\RecipeDetailsMetabox;
 
 // Your code starts here.
 
 // require_once le fichier autoload.php qui lui fera un require_once pour toutes les class qui ont besoin d'être chargées.
 require_once('autoload.php');
-// J'inclus le fichier env
-require_once('env.php');
-// J'inclus le fichier helpers.php
-require_once('helpers.php');
 
-// Appel de la class venant du namespace qu'on a définit dans le fichier RecipePostType.php ,l'avantage c'est qu'on a redéfinit le nom de notre class qui était RecipePostType par App\Features\PostTypes\RecipePostType il y a maintenant presque aucune chance qu'un autre plugin utilise le meme nom de class et donc il n'y aura pas de conflit.
-add_action('init',[RecipePostType::class, 'register']);
-add_action('init', [RecipeTaxonomy::class, 'register']);
-add_action('add_meta_boxes_recipe', [RecipeDetailsMetabox::class, 'add_meta_box']);
-// On finit par lancer la function save quand le hook save_post_$slug est appelé
-// https://developer.wordpress.org/reference/hooks/save_post_post-post_type/
-add_action('save_post_' . RecipePostType::$slug, [RecipeDetailsMetabox::class, 'save']); 
+// J'inclus le fichier bootstrap qui lui contient tous les require_once,le but est de structurer nos fichiers, nos dossiers et de faire les appels de manière structurée dans les bons fichiers en se basant sur la structure et le fonctionnement de Laravel.
+require_once('bootstrap.php');
