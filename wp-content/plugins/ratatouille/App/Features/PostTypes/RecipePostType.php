@@ -18,8 +18,8 @@ class RecipePostType
   public static function register()
   {
     register_post_type(
-      'recipe', 
-      // on remplace le slug qui était écrit en dur par la variable, on fait cela car on va fair appel à notre function register_post_type par son indentifiant à plusieurs endroits. Si on change la valeur de la variable à tous les endroits ou son identifiant est utilisé sera mis à jours.
+      //'recipe', 
+      // on remplace le slug qui était écrit en dur au-dessus par la variable, on fait cela car on va fair appel à notre function register_post_type par son indentifiant à plusieurs endroits. Si on change la valeur de la variable à tous les endroits ou son identifiant est utilisé sera mis à jours.
       self::$slug, 
       [
            // labels contient un tableau avec pleins de paramètres par defaut en anglais comme : Add Post, Edit Post etc, on fait référence aux clefs et on y introduit une nouvelle valeur en français pour avoir les messages en français dans le backoffice.
@@ -50,7 +50,10 @@ class RecipePostType
         'has_archive' => true,
         'rewrite' => [
           'slug' => 'recette'
-        ]
+        ],
+        // Rajout d'un icon à coté de notre lien 'Recette' dans notre menu, par défaut on à une epingle, je l'ai changée pour un bouquin. La liste des icones peut être retrouvé sur :
+        // https://developer.wordpress.org/resource/dashicons/
+        'menu_icon' => 'dashicons-book'
       ]
     );
   }
