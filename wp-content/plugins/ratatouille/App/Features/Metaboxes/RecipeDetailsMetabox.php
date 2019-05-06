@@ -27,10 +27,7 @@ class RecipeDetailsMetabox
    */
   public static function render()
   {
-     // chemin jusqu'au dossier dans lequel on est, cela retourne /home/utilisateur/Bureau/...
-    $path_racine = $_SERVER["DOCUMENT_ROOT"];
-    //echo $path_racine;
-    // à ça, on concatène le reste du chemin jusqu'a arriver dans le fichier recipe-detail-html
-    include($path_racine . '/wp-labs/wp-content/plugins/ratatouille/resources/views/metaboxes/recipe-detail.html.php');
+     // J'inclus le fichier recipe-detail.html.php en me servant de la variable global qui vaut tout le chemin jusqu'au dossier views, je complète le chemin jusqu'au fichier.
+    include(RAT_VIEW_DIR .'metaboxes/recipe-detail.html.php');
   }
 }  

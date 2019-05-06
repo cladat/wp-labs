@@ -20,6 +20,8 @@ use App\Features\MetaBoxes\RecipeDetailsMetabox;
 
 // require_once le fichier autoload.php qui lui fera un require_once pour toutes les class qui ont besoin d'être chargées.
 require_once('autoload.php');
+// J'inclus le fichier env
+require_once('env.php');
 
 // Appel de la class venant du namespace qu'on a définit dans le fichier RecipePostType.php ,l'avantage c'est qu'on a redéfinit le nom de notre class qui était RecipePostType par App\Features\PostTypes\RecipePostType il y a maintenant presque aucune chance qu'un autre plugin utilise le meme nom de class et donc il n'y aura pas de conflit.
 add_action('init',[RecipePostType::class, 'register']);
