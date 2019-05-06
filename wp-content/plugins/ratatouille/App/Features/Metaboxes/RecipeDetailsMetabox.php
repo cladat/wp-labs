@@ -27,6 +27,10 @@ class RecipeDetailsMetabox
    */
   public static function render()
   {
-    echo "<h3>Hello</h3>";
+     // chemin jusqu'au dossier dans lequel on est, cela retourne /home/utilisateur/Bureau/...
+    $path_racine = $_SERVER["DOCUMENT_ROOT"];
+    //echo $path_racine;
+    // à ça, on concatène le reste du chemin jusqu'a arriver dans le fichier recipe-detail-html
+    include($path_racine . '/wp-labs/wp-content/plugins/ratatouille/resources/views/metaboxes/recipe-detail.html.php');
   }
 }  
