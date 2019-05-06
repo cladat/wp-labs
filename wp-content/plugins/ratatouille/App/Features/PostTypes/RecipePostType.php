@@ -55,7 +55,7 @@ class RecipePostType
         'taxonomies' => ['category', 'post_tag'],
         // Rajout d'un icon à coté de notre lien 'Recette' dans notre menu, par défaut on à une epingle, je l'ai changée pour un bouquin. La liste des icones peut être retrouvé sur :
         // https://developer.wordpress.org/resource/dashicons/
-        'menu_icon' => 'dashicons-book'
+        'menu_icon' => 'dashicons-book',
       ]
     );
   }

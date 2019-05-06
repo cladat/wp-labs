@@ -17,6 +17,14 @@ class RecipeTaxonomy {
     ];
     $args = [ // Rajout d'arguments
       'labels' => $labels,
+        // par défaut hierarchical est false et l'aspect de votre taxonomy dans votre recette ressemblera a celle des étiquettes,si cest true l'aspect sera semblable a celle des catégories.
+      'hierarchical' => true, 
+        // permet d'activer ou de désactiver la taxonomy. par défaut c'est en true, on la met juste pour que vous connaissiez.
+      'show_ui' => true,
+        // visible dans le menu ou non.
+      'show_in_menu' => true,
+        // show admin column fait référence la column de prévisualisation là ou il y a Toutes les recettes, il y a la column titre,catégorie,etiquette etc... si c'est true il y aura également Type de recette
+      'show_admin_column' => true,
     ];
      // tableau avec deux labels, dans les $args j'ai utilisé un seul paramètre c'est 'labels' au quel j'ai donné la valeur $labels, j'ai fini par passer $args en troisième paramètre à la fonction register_taxonomy.
     register_taxonomy(self::$slug, [RecipePostType::$slug], $args);
