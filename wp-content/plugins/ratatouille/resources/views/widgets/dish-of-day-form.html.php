@@ -4,7 +4,5 @@
     <input class="widefat" id="title" name="<?php echo $title_name; ?>" type="text" value="<?= $title ?>">
 </p>
 <p>
-    <textarea class="widefat" id="text" name="<?php echo $text_name; ?>" type="text" cols="30" rows="10">
-    <?= $text ?>
-    </textarea>
+    <textarea class="widefat" id="text" name="<?php echo $text_name; ?>" type="text" cols="30" rows="10"><?= $text ?></textarea>
 </p> 
