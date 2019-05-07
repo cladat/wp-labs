@@ -42,3 +42,12 @@ function update_post_metas($post_id, $data)
     update_post_meta($post_id,$key,$value);
   }
 }
+
+// création d'un helper pour assainir les données avec sanitize text field seulement si l'element contenu dans $key existe dans le tableau $data 
+// https://www.php.net/manual/fr/function.array-key-exists.php
+function post_data($key,$data){
+  if(array_key_exists($key,$data)){
+    return sanitize_text_field($data[$key]);
+  }
+  return '';
+} 
