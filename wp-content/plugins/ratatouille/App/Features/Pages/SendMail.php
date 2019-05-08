@@ -43,11 +43,18 @@ class SendMail
     // on à remplacé notre pavé par un helper qui le contient et on le stock dans une variable qu'on passe à notre wp_mail.
     $mail = mail_template('pages/template-mail',compact('name','firstname','message'));
 
-     // A chaque fois qu'on lance de formulaire d'envoi de mail on rajout dans $_SESSION un tableau notice avec deux clefs et leur valeur.
-    $_SESSION['notice'] = [
+    // Si le mail est bien envoyé status = 'success' sinon 'error'
+    if(wp_mail($email, 'Pour ' . $name . ' ' . $firstname, $mail,$header)) {
+      $_SESSION['notice'] = [
       'status' => 'success',
       'message' => 'votre e-mail a bien été envoyé'
     ];
+    } else {
+      $_SESSION['notice'] = [
+        'status' => 'error',
+        'message' => 'Une erreur est survenue, veuillez réessayer plus tard'
+      ];
+    }
     
      // on rajoute $header en 5ème paramètre
     wp_mail($email, 'Pour ' . $name . ' ' . $firstname, $mail, $header);
