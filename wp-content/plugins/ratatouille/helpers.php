@@ -51,3 +51,12 @@ function post_data($key,$data){
   }
   return '';
 } 
+
+// On créer un helper qui fait plus au moins comme notre autre helper view mais avec nos function ob_start() et ob_get_clean(). on retourne ce qu'a traité ob_get_clean
+function mail_template($path,$data = array())
+{
+  ob_start();
+  extract($data);
+  include(RAT_VIEW_DIR . $path . '.html.php');
+  return ob_get_clean();
+}  
