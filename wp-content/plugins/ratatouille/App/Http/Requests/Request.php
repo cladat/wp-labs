@@ -13,6 +13,10 @@ class Request{
     foreach ($data as $input_name => $verification) {
       // on lance la function de la class, 'email' ou 'required' selon ce que vaut $verification et on rempli le paramètre de la function avec $input_name
       call_user_func([self::class, $verification], $input_name);
+      // En même temps qu'on fait les vérifications pour savoir si les champs sont bien remplis on en profite pour stocker ce qu'a écrit le client dans notre super global $_SESSION sous la clef 'old'.
+      // On prépare un tableau pour pouvoir renvoyer les valeurs précédentes afin de ne pas devoir les réécrire.
+      $_SESSION['old'][$input_name] = $_POST[$input_name];
+      $_SESSION;
     }
 
     // On vérifie que $errors contient quelque chose, si c'est le cas alors on récupère tous les messages d'erreurs qu'on y a stocké, on fait un foreach dessus pour réecrire chaque ligne qu'on stock dans une variable $message 
