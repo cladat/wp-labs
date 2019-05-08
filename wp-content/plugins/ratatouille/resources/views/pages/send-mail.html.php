@@ -7,6 +7,8 @@
     <p>Ce formulaire vous permet de contacter vos clients pour leur réservation.</p>
     
     <form action="<?= get_admin_url() . '/?action=send-mail'; ?>" method="post">
+    <!-- Cette fonction créé des inputs cachés qui contiennent des informations qui vont nous permetre de savoir si le formulaire est authentique et si il est bien executé via notre site web et pas via une autre source. -->
+    <?php wp_nonce_field('send-mail'); ?>
         <table class="form-table">
             <tr>
                 <th>e-mail</th>
